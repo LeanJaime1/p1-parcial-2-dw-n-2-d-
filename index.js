@@ -98,6 +98,12 @@ productos.forEach( (producto) => {
     const numeroDelPrecio = document.createElement('span');
     precio.appendChild(numeroDelPrecio);
     numeroDelPrecio.innerText = `${producto.precio}`;
+    
+    
+    /*CATEGORÍA*/
+    const categoria = document.createElement('p');
+    precio.after(categoria);
+    categoria.innerText = `${producto.categoría}`;
 
 
 
