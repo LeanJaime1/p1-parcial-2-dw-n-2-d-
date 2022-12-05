@@ -9,6 +9,7 @@
 
 Me falto incorporar que los objetos se eliminen de a uno por falta de tiempo.
 Agregue vaciar el carrito, pero el mismo se vacia una vez que cierro el modal de 'ver carrito' y lo vuelvo a abrir.
+El monto  total del carrito lo muestro en la pantalla principal.
 
 ## Requisitos obligatorios
 
