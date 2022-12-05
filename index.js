@@ -232,5 +232,12 @@ verCarrito.addEventListener('click',  () =>{
     
     
     
+    /*BOTON CHECKOUT*/
+    const  checkout = document.createElement('button');
+    vaciar.after(checkout);
+    checkout.innerText = 'Ir al checkout';
+    
+    
+    
 })    
    
