@@ -157,7 +157,10 @@ const verCarrito = document.getElementById('carrito');
 verCarrito.addEventListener('click',  () =>{
     
     
-    
+    /*CAJA*/
+    const modal = document.createElement('div');
+    modal.setAttribute('class', 'modal');
+    modal.setAttribute('id', 'modalCarrito');
     
     
     
