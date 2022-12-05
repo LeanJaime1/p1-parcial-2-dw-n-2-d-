@@ -110,6 +110,39 @@ productos.forEach( (producto) => {
     const agregar = document.createElement('button');
     categoria.after(agregar);
     agregar.innerText = 'Agregar';
+    
+    
+    
+    agregar.addEventListener('click', () =>{
+
+    /*AGREGAR PRODUCTOS SIN QUE SE REPITAN*/
+    const repetir = carrito.some((productoRepetido) =>  productoRepetido.id === producto.id);
+
+    if(repetir) {
+
+        carrito.map((prod) =>{
+            if (prod.id === producto.id) {
+                prod.items++;
+            }
+        })
+    }   else{
+
+            carrito.push({
+            id : producto.id,
+            imagen : producto.imagen,
+            nombre : producto.nombre,
+            descripcion : producto.descripcion,
+            precio : producto.precio,
+            categoría : producto.categoría,
+            items : producto.items,
+
+        });
+    }
+        console.log(carrito);
+
+        alert('Se agregó un producto al carrito');
+    })
+
 
 
 
