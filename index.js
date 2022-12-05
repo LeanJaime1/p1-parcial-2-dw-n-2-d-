@@ -77,6 +77,11 @@ productos.forEach( (producto) => {
     
 
 
+    /*IMAGEN*/
+    const imagen = document.createElement('img');
+    card.prepend(imagen);
+    imagen.setAttribute('src', `${producto.imagen}`);
+    imagen.setAttribute('alt', 'Nombre del producto');
 
 
 
