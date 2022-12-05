@@ -104,6 +104,12 @@ productos.forEach( (producto) => {
     const categoria = document.createElement('p');
     precio.after(categoria);
     categoria.innerText = `${producto.categoría}`;
+    
+    
+    /*BOTÓN*/
+    const agregar = document.createElement('button');
+    categoria.after(agregar);
+    agregar.innerText = 'Agregar';
 
 
 
