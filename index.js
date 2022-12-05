@@ -67,7 +67,13 @@ let  carrito = [];
 
 productos.forEach( (producto) => {
     
-    
+    const div = document.getElementById('productos');
+    const card = document.createElement('div');
+    div.appendChild(card);
+    const cardTitulo = document.createElement('h3');
+    cardTitulo.innerText = `${producto.nombre}`;
+    cardTitulo.setAttribute('class', 'tituloDelProducto');
+    card.appendChild(cardTitulo);
     
 
 
