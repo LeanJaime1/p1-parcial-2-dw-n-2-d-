@@ -244,5 +244,11 @@ verCarrito.addEventListener('click',  () =>{
     const totalPrecioProductos = document.getElementById('totalProductos');
     totalPrecioProductos.innerText = `${total}`;
     
+    
+    console.log(totalPrecioProductos);
+
+
+    console.log(modal);
+    
 })    
    
