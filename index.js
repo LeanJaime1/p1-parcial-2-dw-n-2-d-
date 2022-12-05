@@ -239,5 +239,10 @@ verCarrito.addEventListener('click',  () =>{
     
     
     
+    /*TOTAL PRECIO EN CARRITO*/
+    const total = carrito.reduce ((acumulador, elemento) => acumulador + elemento.precio * elemento.items, 0);
+    const totalPrecioProductos = document.getElementById('totalProductos');
+    totalPrecioProductos.innerText = `${total}`;
+    
 })    
    
