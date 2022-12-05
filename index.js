@@ -151,3 +151,21 @@ productos.forEach( (producto) => {
 
 /*CARRITO*/
 const verCarrito = document.getElementById('carrito');
+
+
+
+verCarrito.addEventListener('click',  () =>{
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+})    
+   
