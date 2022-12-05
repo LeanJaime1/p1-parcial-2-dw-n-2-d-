@@ -82,6 +82,13 @@ productos.forEach( (producto) => {
     card.prepend(imagen);
     imagen.setAttribute('src', `${producto.imagen}`);
     imagen.setAttribute('alt', 'Nombre del producto');
+    
+    
+    
+    /*DESCRIPCIÓN DEL PRODUCTO*/
+    const descripcion = document.createElement('p');
+    cardTitulo.after(descripcion);
+    descripcion.innerText = `${producto.descripcion}`;
 
 
 
