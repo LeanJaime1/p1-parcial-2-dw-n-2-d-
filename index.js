@@ -250,5 +250,10 @@ verCarrito.addEventListener('click',  () =>{
 
     console.log(modal);
     
+    
+    
+    
+    document.querySelector('body').appendChild(modal);
+    
 })    
    
