@@ -255,5 +255,16 @@ verCarrito.addEventListener('click',  () =>{
     
     document.querySelector('body').appendChild(modal);
     
+    
+    
+     /*VACIAR CARRITO */
+    vaciar.addEventListener('click',  () =>{
+    
+    carrito = [];
+    console.log(carrito);
+    
+})
+
+    
 })    
    
