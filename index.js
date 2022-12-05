@@ -63,3 +63,17 @@ let productos = [
 
 
 let  carrito = [];
+
+
+productos.forEach( (producto) => {
+    
+    
+    
+
+
+
+
+
+
+
+} )
