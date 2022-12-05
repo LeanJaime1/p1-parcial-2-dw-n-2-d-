@@ -60,3 +60,6 @@ let productos = [
         items : 1,
     },
 ];
+
+
+let  carrito = [];
