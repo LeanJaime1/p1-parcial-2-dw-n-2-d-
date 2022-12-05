@@ -223,6 +223,12 @@ verCarrito.addEventListener('click',  () =>{
     
     
     
+    /*BOTON VACIAR*/
+    const vaciar = document.createElement('button');
+    contenedorDeLista.after(vaciar);
+    vaciar.setAttribute('id', 'vaciar');
+    vaciar.innerText = 'Vaciar';
+    
     
     
     
