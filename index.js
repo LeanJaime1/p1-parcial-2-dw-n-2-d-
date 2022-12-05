@@ -89,6 +89,15 @@ productos.forEach( (producto) => {
     const descripcion = document.createElement('p');
     cardTitulo.after(descripcion);
     descripcion.innerText = `${producto.descripcion}`;
+    
+    
+     /*PRECIO*/
+    const precio = document.createElement('p');
+    descripcion.after(precio);
+    precio.innerText = 'Precio: $';
+    const numeroDelPrecio = document.createElement('span');
+    precio.appendChild(numeroDelPrecio);
+    numeroDelPrecio.innerText = `${producto.precio}`;
 
 
 
