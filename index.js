@@ -174,6 +174,14 @@ verCarrito.addEventListener('click',  () =>{
     })
 
 
+    
+    /*ITEMS*/
+    const items = document.createElement('p');
+    cerrar.after(items);
+    const spanPrecio = document.createElement('span');
+    items.appendChild(spanPrecio);
+    spanPrecio.setAttribute('id', 'spanPrecio');
+    spanPrecio.innerText = `PRODUCTOS`;
 
 
 
