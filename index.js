@@ -195,5 +195,36 @@ verCarrito.addEventListener('click',  () =>{
     const contenedorDeLista = document.createElement('ul');
     separador.after(contenedorDeLista);
 
+    
+    
+    
+    /*AGREGO LOS PRODUCTOS AL CARRITO*/
+    carrito.forEach((producto) => {
+
+    /*LISTA*/
+    const itemsLista = document.createElement('li');
+    contenedorDeLista.appendChild(itemsLista);
+    itemsLista.innerText = `${producto.nombre}`;
+    const span1 = document.createElement('span');
+    itemsLista.appendChild(span1);
+    span1.innerText = `$${producto.precio}`;
+    const span2 = document.createElement('span');
+    span1.after(span2);
+    span2.innerText = `Items ${producto.items}`;
+    const eliminarProducto = document.createElement('a');
+    span2.after(eliminarProducto);
+    eliminarProducto.innerText = 'Eliminar';
+    eliminarProducto.setAttribute('href', '#');
+    eliminarProducto.setAttribute('id', 'botonEliminar');
+        
+
+    })
+    
+    
+    
+    
+    
+    
+    
 })    
    
