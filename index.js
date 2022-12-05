@@ -189,6 +189,11 @@ verCarrito.addEventListener('click',  () =>{
     const separador = document.createElement('hr');
     items.after(separador);
 
+    
+    
+    /*UL*/
+    const contenedorDeLista = document.createElement('ul');
+    separador.after(contenedorDeLista);
 
 })    
    
