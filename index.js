@@ -184,6 +184,10 @@ verCarrito.addEventListener('click',  () =>{
     spanPrecio.innerText = `PRODUCTOS`;
 
 
+    
+    /*SEPARADOR*/
+    const separador = document.createElement('hr');
+    items.after(separador);
 
 
 })    
