@@ -163,7 +163,15 @@ verCarrito.addEventListener('click',  () =>{
     modal.setAttribute('id', 'modalCarrito');
     
     
-    
+    /*CERRAR*/
+    const cerrar = document.createElement('a');
+    modal.appendChild(cerrar);
+    cerrar.setAttribute('class', 'cerrar');
+    cerrar.setAttribute('href', 'javascript:void(0)');
+    cerrar.innerText = 'X';
+    cerrar.addEventListener('click', () =>{
+    modal.style.display =  'none';
+    })
 
 
 
