@@ -7,9 +7,7 @@
 
 ## Observaciones
 
-Me falto incorporar que los objetos se eliminen de a uno por falta de tiempo.
-Agregue vaciar el carrito, pero el mismo se vacia una vez que cierro el modal de 'ver carrito' y lo vuelvo a abrir.
-El monto  total del carrito lo muestro en la pantalla principal.
+Intente crear una función para poder eliminar los productos del carrito pero tiene errores, le agregue lo que  pude avanzar en filtrar productos pero no está terminado.
 
 ## Requisitos obligatorios
 
