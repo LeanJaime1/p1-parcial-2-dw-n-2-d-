@@ -288,5 +288,44 @@ const borrarProducto =  ()  => {
 
 
 
+/*FILTROS*/
+
+const productosPs3 = document.getElementById('ps3');
+const productosPs4 = document.getElementById('ps4');
+const productosPs5 = document.getElementById('ps5');
+
+
+
+productosPs3.addEventListener('click', () => {
+
+   const productosPs3 = productos.filter(producto => producto.id < 3);
+
+   console.log(productosPs3);
+   
+   
+});
+
+
+productosPs4.addEventListener('click', () => {
+
+    const productosPs4 = productos.filter(producto => producto.id >= 3 && producto.id < 5);
+ 
+    console.log(productosPs4);
+ 
+ 
+   
+    
+ });
+
+
+productosPs5.addEventListener('click', () => {
+
+    const productosPs5 = productos.filter(producto => producto.id >= 5);
+ 
+    console.log(productosPs5);
+
+    
+    
+ });
 
 
