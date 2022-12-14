@@ -154,117 +154,114 @@ const verCarrito = document.getElementById('carrito');
 
 
 
-verCarrito.addEventListener('click',  () =>{
-    
-    
-    /*CAJA*/
-    const modal = document.createElement('div');
-    modal.setAttribute('class', 'modal');
-    modal.setAttribute('id', 'modalCarrito');
-    
-    
-    /*CERRAR*/
-    const cerrar = document.createElement('a');
-    modal.appendChild(cerrar);
-    cerrar.setAttribute('class', 'cerrar');
-    cerrar.setAttribute('href', 'javascript:void(0)');
-    cerrar.innerText = 'X';
-    cerrar.addEventListener('click', () =>{
-    modal.style.display =  'none';
-    })
+const crearCarrito = () => {
 
-
-    
-    /*ITEMS*/
-    const items = document.createElement('p');
-    cerrar.after(items);
-    const spanPrecio = document.createElement('span');
-    items.appendChild(spanPrecio);
-    spanPrecio.setAttribute('id', 'spanPrecio');
-    spanPrecio.innerText = `PRODUCTOS`;
-
-
-    
-    /*SEPARADOR*/
-    const separador = document.createElement('hr');
-    items.after(separador);
-
-    
-    
-    /*UL*/
-    const contenedorDeLista = document.createElement('ul');
-    separador.after(contenedorDeLista);
-
-    
-    
-    
-    /*AGREGO LOS PRODUCTOS AL CARRITO*/
-    carrito.forEach((producto) => {
-
-    /*LISTA*/
-    const itemsLista = document.createElement('li');
-    contenedorDeLista.appendChild(itemsLista);
-    itemsLista.innerText = `${producto.nombre}`;
-    const span1 = document.createElement('span');
-    itemsLista.appendChild(span1);
-    span1.innerText = `$${producto.precio}`;
-    const span2 = document.createElement('span');
-    span1.after(span2);
-    span2.innerText = `Items ${producto.items}`;
-    const eliminarProducto = document.createElement('a');
-    span2.after(eliminarProducto);
-    eliminarProducto.innerText = 'Eliminar';
-    eliminarProducto.setAttribute('href', '#');
-    eliminarProducto.setAttribute('id', 'botonEliminar');
+        /*CAJA*/
+        const modal = document.createElement('div');
+        modal.setAttribute('class', 'modal');
+        modal.setAttribute('id', 'modalCarrito');
         
+        /*CERRAR*/
+        const cerrar = document.createElement('a');
+        modal.appendChild(cerrar);
+        cerrar.setAttribute('class', 'cerrar');
+        cerrar.setAttribute('href', 'javascript:void(0)');
+        cerrar.innerText = 'X';
+        cerrar.addEventListener('click', () =>{
+           modal.style.display =  'none';
+        })
+       
+       
+        /*ITEMS*/
+        const items = document.createElement('p');
+        cerrar.after(items);
+        const spanPrecio = document.createElement('span');
+        items.appendChild(spanPrecio);
+        spanPrecio.setAttribute('id', 'spanPrecio');
+        spanPrecio.innerText = `PRODUCTOS`;
+        
+       
+       
+        /*SEPARADOR*/
+        const separador = document.createElement('hr');
+        items.after(separador);
+       
+        /*UL*/
+        const contenedorDeLista = document.createElement('ul');
+        separador.after(contenedorDeLista);
+       
+       
+       
+        /*AGREGO LOS PRODUCTOS AL CARRITO*/
+       
+       
 
-    })
-    
-    
-    
-    
-    /*BOTON VACIAR*/
-    const vaciar = document.createElement('button');
-    contenedorDeLista.after(vaciar);
-    vaciar.setAttribute('id', 'vaciar');
-    vaciar.innerText = 'Vaciar';
-    
-    
-    
-    
-    /*BOTON CHECKOUT*/
-    const  checkout = document.createElement('button');
-    vaciar.after(checkout);
-    checkout.innerText = 'Ir al checkout';
-    
-    
-    
-    /*TOTAL PRECIO EN CARRITO*/
-    const total = carrito.reduce ((acumulador, elemento) => acumulador + elemento.precio * elemento.items, 0);
-    const totalPrecioProductos = document.getElementById('totalProductos');
-    totalPrecioProductos.innerText = `${total}`;
-    
-    
-    console.log(totalPrecioProductos);
+           carrito.forEach((producto) => {
+       
+               /*LISTA*/
+               const itemsLista = document.createElement('li');
+               contenedorDeLista.appendChild(itemsLista);
+               itemsLista.innerText = `${producto.nombre}`;
+               const span1 = document.createElement('span');
+               itemsLista.appendChild(span1);
+               span1.innerText = `$${producto.precio}`;
+               const span2 = document.createElement('span');
+               span1.after(span2);
+               span2.innerText = `Items ${producto.items}`;
+               const eliminarProducto = document.createElement('a');
+               span2.after(eliminarProducto);
+               eliminarProducto.innerText = 'Eliminar';
+               eliminarProducto.setAttribute('href', '#');
+               eliminarProducto.setAttribute('id', 'botonEliminar');
+               
+       
+              eliminarProducto.addEventListener('click', borrarProducto);
+       
+        } );
 
+       
+        /*BOTON VACIAR*/
+        const vaciar = document.createElement('button');
+        contenedorDeLista.after(vaciar);
+        vaciar.setAttribute('id', 'vaciar');
+        vaciar.innerText = 'Vaciar';
+       
+       
+       
+        /*BOTON CHECKOUT*/
+        const  checkout = document.createElement('button');
+        vaciar.after(checkout);
+        checkout.innerText = 'Ir al checkout';
+        
+       
+       
+         /*CHEQUEAR PRECIO TOTAL ANTES  DEL BOTON VER CARRITO*/
+       
+        /*TOTAL PRECIO EN CARRITO*/
+        const total = carrito.reduce ((acumulador, elemento) => acumulador + elemento.precio * elemento.items, 0);
+        const totalPrecioProductos = document.getElementById('totalProductos');
+        totalPrecioProductos.innerText = `${total}`;
+       
+       
+       
+        console.log(totalPrecioProductos);
+       
+       
+        console.log(modal);
+       
+        document.querySelector('body').appendChild(modal);
+       
+        /*VACIAR CARRITO VER*/
+        vaciar.addEventListener('click',  () =>{
+           
+           carrito = [];
+           console.log(carrito);
+           
+       })
+       
+       
+       
+       
+      
+};
 
-    console.log(modal);
-    
-    
-    
-    
-    document.querySelector('body').appendChild(modal);
-    
-    
-    
-     /*VACIAR CARRITO */
-    vaciar.addEventListener('click',  () =>{
-    
-    carrito = [];
-    console.log(carrito);
-    
-})
-
-    
-})    
-   
