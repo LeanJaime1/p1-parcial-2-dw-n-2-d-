@@ -270,3 +270,23 @@ const crearCarrito = () => {
 verCarrito.addEventListener('click', crearCarrito);
 
 
+
+/*eliminar producto*/
+
+const borrarProducto =  ()  => {
+    const encontrarId = carrito.find((producto) => producto.id);
+
+    carrito = carrito.filter((carritoId) =>{
+        return carritoId !== encontrarId;
+    });
+
+    crearCarrito();
+
+
+};
+
+
+
+
+
+
