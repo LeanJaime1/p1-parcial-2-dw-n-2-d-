@@ -265,3 +265,8 @@ const crearCarrito = () => {
       
 };
 
+
+
+verCarrito.addEventListener('click', crearCarrito);
+
+
